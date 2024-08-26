@@ -1,0 +1,210 @@
+import { Component, OnInit } from '@angular/core';
+import { MenuItem, SelectItem } from 'primeng/api';
+
+@Component({
+    selector: 'app-driver-management',
+    templateUrl: './driver-management.component.html',
+    styleUrls: ['./driver-management.component.scss'],
+})
+export class DriverManagementComponent implements OnInit {
+    routeItems: MenuItem[] = [];
+    status: any[] = [];
+    selectedDrop: SelectItem = { value: '' };
+    driver = [
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'A',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'A',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'A',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'A',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'A',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'A',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'A',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'A',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'A',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+        {
+            id: 'TX-000001',
+            name: 'Ms. Thinh',
+            phoneNumber: '0472648638',
+            status: 'Chính thức',
+            driverType: 'Tài xế đối tác',
+            rank: 'B',
+            coordinatorInCharge: 'Lê Đình Đăng',
+        },
+    ];
+    constructor() {}
+
+    ngOnInit() {
+        this.routeItems = [
+            { label: 'Tất cả đơn vị', routerLink: '' },
+            { label: 'Đơn vị đang hoạt động', routerLink: '' },
+            { label: 'Đơn vị bị đình chỉ', routerLink: '' },
+            { label: 'Đơn vị ngưng hợp tác', routerLink: '' },
+            { label: 'Đơn vị có công nợ', routerLink: '' },
+            { label: 'Đơn vị cần thanh toán', routerLink: '' },
+        ];
+        this.status = [{ label: 'Chính thức' }, { label: 'Chưa chính thức' }];
+        this.driver = [
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+            {
+                id: 'TX-000001',
+                name: 'Ms. Thinh',
+                phoneNumber: '0472648638',
+                status: 'Chính thức',
+                driverType: 'Tài xế đối tác',
+                rank: 'A',
+                coordinatorInCharge: 'Lê Đình Đăng',
+            },
+        ];
+    }
+}

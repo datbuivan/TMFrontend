@@ -1,0 +1,162 @@
+<div >
+    <div class="card card-w-title flex flex-wrap">
+        <div class="col-12 h-full">
+            <p-tabMenu styleClass="mb-5" [model]="routeItems"></p-tabMenu>
+            <p-table
+                #dt1
+                [value]="unit"
+                dataKey="id"
+                [rows]="5"
+                [rowHover]="true"
+                styleClass="p-datatable-gridlines"
+                [paginator]="true"
+                [globalFilterFields]="[
+                    'name',
+                    'country.name',
+                    'representative.name',
+                    'status'
+                ]"
+                responsiveLayout="scroll"
+            >
+                <ng-template pTemplate="caption">
+                    <div class="flex items-center gap-5">
+                        <div class="flex rounded justify-content-center text-center items-center bg-gray-400 w-[200px] h-[42px]">
+                            <span
+                                >Bộ lọc thông tin</span
+                            >
+                        </div>
+                        <span class="p-input-icon-left w-[400px] h-[42px]">
+                            <i class="pi pi-search"></i>
+                            <input
+                                pInputText
+                                type="text"
+                                #filter
+                                placeholder="Nhập thông tin tìm kiếm tài xế"
+                                class="w-full"
+                            />
+                        </span>
+                        <p-dropdown
+                            [options]="status"
+                            [(ngModel)]="selectedDrop"
+                            placeholder="Trạng Thái"
+                            [showClear]="true"
+                            class="h-[42px]"
+                        ></p-dropdown>
+                        <button
+                            pButton
+                            pRipple
+                            type="button"
+                            label="Tìm kiếm"
+                            class="p-button-outlined h-[42px]"
+                        ></button>
+                        <button pButton
+                            pRipple label="Tạo mới"
+                            icon="pi pi-plus"
+                            class="p-button-primary mr-2 h-[42px]"
+                            routerLink="/management/add-unit"
+                        ></button>
+
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="min-width: 2rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>#</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 4rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                               <span>MÃ ĐVCƯ XE</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 10rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>TÊN ĐVCƯ XE</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 10rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>NHÓM ĐVCƯ XE</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 10rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>TRẠNG THÁI</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 4rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>NGÀY TẠO</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 4rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>SỐ TUYẾN PHỤ TRÁCH</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 4rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>CHUYẾN ĐÃ XẾP LỊCH</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 4rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>SỐ XE TẢI TRỰC THUỘC</span>
+                            </div>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-unit>
+					<tr>
+                        <td class="justify-content-center text-center items-center">
+                            <span>1</span>
+                        </td>
+						<td class="justify-content-center text-center items-center">
+							<span>{{unit.id}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{unit.name}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{unit.group}}</span>
+						</td>
+                        <td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{unit.status}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{unit.createdDate}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+                            <span class="image-text ml-2">{{unit.routeCharge}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{unit.scheduledTrip}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{unit.affiliatedTruck}}</span>
+						</td>
+					</tr>
+				</ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,173 @@
+<div >
+    <div class="card card-w-title flex flex-wrap">
+        <div class="col-12 h-full">
+            <p-tabMenu styleClass="mb-5" [model]="routeItems"></p-tabMenu>
+            <p-table
+                #dt1
+                [value]="truck"
+                dataKey="id"
+                [rows]="5"
+                [rowHover]="true"
+                styleClass="p-datatable-gridlines"
+                [paginator]="true"
+                [globalFilterFields]="[
+                    'name',
+                    'country.name',
+                    'representative.name',
+                    'status'
+                ]"
+                responsiveLayout="scroll"
+            >
+                <ng-template pTemplate="caption">
+                    <div class="flex items-center gap-5">
+                        <div class="flex rounded justify-content-center text-center items-center bg-gray-400 w-[200px] h-[42px]">
+                            <span
+                                >Bộ lọc thông tin</span
+                            >
+                        </div>
+                        <span class="p-input-icon-left w-[400px] h-[42px]">
+                            <i class="pi pi-search"></i>
+                            <input
+                                pInputText
+                                type="text"
+                                #filter
+                                placeholder="Nhập thông tin tìm kiếm tài xế"
+                                class="w-full"
+                            />
+                        </span>
+                        <p-dropdown
+                            [options]="status"
+                            [(ngModel)]="selectedDrop"
+                            placeholder="Trạng Thái"
+                            [showClear]="true"
+                            class="h-[42px]"
+                        ></p-dropdown>
+                        <button
+                            pButton
+                            pRipple
+                            type="button"
+                            label="Tìm kiếm"
+                            class="p-button-outlined h-[42px]"
+                        ></button>
+                        <button pButton
+                            pRipple label="Tạo mới"
+                            icon="pi pi-plus"
+                            class="p-button-primary mr-2 h-[42px]"
+                            routerLink="/management/add-truck"
+                        ></button>
+
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="min-width: 2rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>#</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 4rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                               <span>HÀNH ĐỘNG</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 8rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>BIỂN SỐ XE</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 1rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>TRỌNG TẢI</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 4rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>HÃNG XE</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 10rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>TRẠNG THÁI XE</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 8rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>TRẠNG THÁI BẢO DƯỠNG</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 8rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>TRẠNG THÁI GIẤY TỜ</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 9rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>HÌNH THỨC HOẠT ĐỘNG</span>
+                            </div>
+                        </th>
+                        <th style="min-width: 8rem">
+                            <div
+                                class="flex justify-content-center text-center items-center"
+                            >
+                                <span>TÀI XẾ PHỤ TRÁCH</span>
+                            </div>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-truck>
+					<tr>
+                        <td class="justify-content-center text-center items-center">
+                            <span>1</span>
+                        </td>
+                        <td class="justify-content-center text-center items-center">
+                            <button pButton pRipple icon="pi pi-eye" class="p-button-rounded p-button-help mr-2"></button>
+                            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-primary" ></button>
+                        </td>
+						<td class="justify-content-center text-center items-center">
+							<span>{{truck.id}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{truck.load}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{truck.brand}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{truck.status}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+                            <span class="image-text ml-2">{{truck.maintenanceStatus}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{truck.documentStatus}}</span>
+						</td>
+						<td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{truck.typeActive}}</span>
+						</td>
+                        <td class="justify-content-center text-center items-center">
+							<span class="image-text ml-2">{{truck.driverId}}</span>
+						</td>
+					</tr>
+				</ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>

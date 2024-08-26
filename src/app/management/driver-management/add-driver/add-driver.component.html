@@ -1,0 +1,162 @@
+<div class="card-container">
+    <!--Header-->
+    <div class="flex border-b-2 h-14 pl-5">
+        <div class="flex justify-start items-center">
+            <p class="md:text-xl font-bold tracking-tight">
+                Thông tin định danh tài xế
+            </p>
+        </div>
+        <div class="flex items-center ml-[500px]">
+            <p class="md:text-xl tracking-tight">Bộ phận: Lái xe</p>
+        </div>
+    </div>
+    <div class="" [formGroup]="form">
+        <div class="flex card p-fluid">
+            <div class="col-2 pr-[50px]">
+                <div>
+                    <img src="../../../../assets/layout/images/avatar.png" alt="">
+                </div>
+            </div>
+            <div class="col-5 pr-[50px]">
+			    <div class="flex field grid">
+				    <label htmlFor="name" class="col-12 mb-2 md:col-4 md:mb-0">Tên nhân viên</label>
+				    <div class="col-12 md:col-8">
+					    <input formControlName="name" pInputText id="name" type="text" />
+				    </div>
+			    </div>
+			    <div class="flex field grid">
+				    <label htmlFor="address" class="col-12 mb-2 md:col-4 md:mb-0">Địa chỉ</label>
+				    <div class="flex col-12 md:col-8">
+					    <input formControlName="address" pInputText id="address" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+                    <label htmlFor="date" class="col-12 mb-2 md:col-4 md:mb-0">Ngày sinh</label>
+                    <div class="col-12 md:col-8 ">
+                        <p-calendar formControlName="date" inputId="date"  placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
+                    </div>
+                </div>
+                <div class="flex field grid">
+				    <label htmlFor="phoneNumber" class="col-12 mb-2 md:col-4 md:mb-0">Số điện thoại</label>
+				    <div class="col-12 md:col-8 ">
+					    <input formControlName="phoneNumber" pInputText id="phoneNumber" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="cmnd" class="col-12 mb-2 md:col-4 md:mb-0">Số CMND</label>
+				    <div class="col-12 md:col-8 ">
+					    <input formControlName="cmnd" pInputText id="cmnd" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="gplx" class="col-12 mb-2 md:col-4 md:mb-0">Số GPLX</label>
+				    <div class="flex col-12 md:col-8 ">
+					    <input formControlName="driverLicense" pInputText id="gplx" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="rank" class="col-12 mb-2 md:col-4 md:mb-0">Hạng bằng</label>
+				    <div class="col-12 md:col-8 ">
+                        <p-dropdown formControlName="rank"  inputId="rank" [autoDisplayFirst]="false" [options]="status" placeholder="--Chọn hạng bằng--" class="ng-invalid ng-dirty"></p-dropdown>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="dategplx" class="col-12 mb-2 md:col-4 md:mb-0">Hạn GPLX</label>
+				    <div class="col-12 md:col-8">
+                        <p-calendar formControlName="driverLicenseExpirationDate" inputId="dategplx" placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
+                    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="formOfWork" class="col-12 mb-2 md:col-4 md:mb-0">Hình thức làm việc</label>
+				    <div class="col-12 md:col-8">
+                        <p-dropdown formControlName="formOfWork" inputId="formOfWork" [autoDisplayFirst]="false" placeholder="--Chọn loại tài xế--" [options]="status" class="ng-invalid ng-dirty"></p-dropdown>
+                    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="status" class="col-12 mb-2 md:col-4 md:mb-0">Trạng thái</label>
+				    <div class="col-12 md:col-8">
+                        <p-dropdown formControlName="status" inputId="status" [autoDisplayFirst]="false" placeholder="--Chọn trạng thái--" [options]="status" class="ng-invalid ng-dirty"></p-dropdown>
+                    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="bankName" class="col-12 mb-2 md:col-4 md:mb-0">Ngân hàng</label>
+				    <div class="col-12 md:col-8">
+                        <p-dropdown formControlName="bankName" inputId="bankName" [autoDisplayFirst]="false" [options]="status" placeholder="--Chọn ngân hàng--" class="ng-invalid ng-dirty"></p-dropdown>
+                    </div>
+			    </div>
+		    </div>
+            <div class="col-5 pl-[50px]">
+                <div class="flex field grid">
+				    <label htmlFor="accountNumber" class="col-12 mb-2 md:col-4 md:mb-0">Số tài khoản</label>
+				    <div class="col-12 md:col-8">
+                        <input formControlName="accountNumber" pInputText id="accountNumber" type="text" />
+                    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="accountName" class="col-12 mb-2 md:col-4 md:mb-0">Tên tài khoản</label>
+				    <div class="col-12 md:col-8">
+                        <input formControlName="accountName" pInputText id="accountName" type="text" />
+                    </div>
+			    </div>
+			    <div class="flex field grid">
+                    <label htmlFor="managementUnitName" class="col-12 mb-2 md:col-4 md:mb-0">Tên đơn vị quản lý</label>
+				    <div class="col-12 md:col-8">
+                        <p-dropdown formControlName="managementUnitName" inputId="managementUnitName" [autoDisplayFirst]="false" placeholder="--Chọn đơn vụ quản lý--" [options]="status" class="ng-invalid ng-dirty"></p-dropdown>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+                    <label htmlFor="coordinatorInCharge" class="col-12 mb-2 md:col-4 md:mb-0">Đp phụ trách</label>
+				    <div class="col-12 md:col-8">
+                        <p-dropdown formControlName="coordinatorInCharge" inputId="coordinatorInCharge" [autoDisplayFirst]="false" placeholder="--Chọn điều phối phụ trách--" [options]="status" class="ng-invalid ng-dirty"></p-dropdown>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+                    <label htmlFor="studyDate" class="col-12 mb-2 md:col-4 md:mb-0">Ngày học việc</label>
+				    <div class="col-12 md:col-8">
+                        <p-calendar formControlName="studyDate" inputId="studyDate" placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+                    <label htmlFor="trialDate" class="col-12 mb-2 md:col-4 md:mb-0">Ngày thử việc</label>
+				    <div class="col-12 md:col-8">
+                        <p-calendar formControlName="trialDate" inputId="trialDate" placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
+				    </div>
+			    </div>
+                <div class="flex justify-between field grid">
+				    <label htmlFor="startDate" class="col-12 mb-2 md:col-4 md:mb-0">Ngày vào việc</label>
+				    <div class="col-12 md:col-8">
+                        <p-calendar formControlName="startDate" inputId="startDate" placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
+                    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="endDate" class="col-12 mb-2 md:col-4 md:mb-0">Ngày hết thời vụ</label>
+				    <div class="col-12 md:col-8 ">
+					    <p-calendar formControlName="endDate" inputId="endDate" placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="note" class="col-12 mb-2 md:col-4 md:mb-0">Ghi chú</label>
+				    <div class="col-12 md:col-8 ">
+					    <textarea formControlName="note" inputId="note" rows="2" cols="30" pInputTextarea class="ng-invalid ng-dirty"></textarea>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="taxName" class="col-12 mb-2 md:col-4 md:mb-0">Tên khai thuế</label>
+				    <div class="col-12 md:col-8 ">
+					    <input formControlName="taxName" pInputText id="taxName" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="taxCode" class="col-12 mb-2 md:col-4 md:mb-0">Mã số thuế</label>
+				    <div class="col-12 md:col-8 ">
+					    <input formControlName="taxCode" pInputText id="taxCode" type="text" />
+				    </div>
+			    </div>
+		    </div>
+        </div>
+    </div>
+</div>
+<div class="mt-[20px] mb-[20px] flex box-border justify-end">
+    <button pButton pRipple type="button" label="Huỷ" class="p-button-secondary mr-2"></button>
+	<button pButton pRipple label="Xác nhận" (click)="submit()" class="p-button-primary"></button>
+</div>

@@ -1,0 +1,130 @@
+<div class="card-container">
+    <!--Header-->
+    <div class="flex border-b-2 h-14 pl-5">
+        <div class="flex justify-start items-center">
+            <p class="md:text-xl font-bold tracking-tight">
+                Thông tin định danh khách hàng
+            </p>
+        </div>
+    </div>
+    <form class="" [formGroup]="form">
+        <div class="flex card p-fluid">
+            <div class="col-6 pr-[100px]">
+			    <div class="flex field grid">
+				    <label htmlFor="name" class="col-12 mb-2 md:col-4 md:mb-0">Tên khách hàng</label>
+				    <div class="col-12 md:col-8">
+					    <input formControlName="name" pInputText id="name" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="phoneContact" class="col-12 mb-2 md:col-4 md:mb-0">SĐT đầu mối liên hệ</label>
+				    <div class="col-12 md:col-8">
+					    <input formControlName="phoneContact" pInputText id="phoneContact" type="text" />
+				    </div>
+			    </div>
+			    <div class="flex field grid">
+				    <label htmlFor="customerType" class="col-12 mb-2 md:col-4 md:mb-0">Nhóm khách hàng</label>
+				    <div class="col-12 md:col-8 ">
+					    <p-dropdown formControlName="customerType" placeholder="--Chọn nhóm khách hàng--" inputId="customerType" [autoDisplayFirst]="false" [options]="status" optionLabel="name" class="ng-invalid ng-dirty"></p-dropdown>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="emailCompany" class="col-12 mb-2 md:col-4 md:mb-0">Email công ty</label>
+				    <div class="col-12 md:col-8 ">
+					    <input formControlName="emailCompany" placeholder="example123@gmail.com" pInputText id="emailCompany" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="createdDate" class="col-12 mb-2 md:col-4 md:mb-0">Ngày tạo thông tin</label>
+				    <div class="col-12 md:col-8 ">
+					    <p-calendar formControlName="createdDate" inputId="createdDate" placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="taxName" class="col-12 mb-2 md:col-4 md:mb-0">Tên khai thuế</label>
+				    <div class="col-12 md:col-8 ">
+					    <input formControlName="taxName" pInputText id="taxName" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="taxCode" class="col-12 mb-2 md:col-4 md:mb-0">Mã số thuế</label>
+				    <div class="col-12 md:col-8 ">
+					    <input formControlName="taxCode" pInputText id="taxCode" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="invoicingAddress" class="col-12 mb-2 md:col-4 md:mb-0">Địa chỉ xuất hoá đơn</label>
+				    <div class="col-12 md:col-8 ">
+					    <input formControlName="invoicingAddress" pInputText id="invoicingAddress" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="accountNumber" class="col-12 mb-2 md:col-4 md:mb-0">Số tài khoản</label>
+				    <div class="col-12 md:col-8">
+                        <input formControlName="accountNumber" placeholder="Nhập số tài khoản" pInputText id="accountNumber" type="text" />
+                    </div>
+			    </div>
+		    </div>
+            <div class="col-6 pl-[100px]">
+                <div class="flex field grid">
+                    <label htmlFor="bankName" class="col-12 mb-2 md:col-4 md:mb-0">Ngân hàng</label>
+                    <div class="col-12 md:col-8">
+                        <p-dropdown formControlName="bankName" placeholder="--Chọn ngân hàng--" inputId="bankName" [autoDisplayFirst]="false" [options]="status" optionLabel="name" class="ng-invalid ng-dirty"></p-dropdown>
+                    </div>
+                </div>
+                <div class="flex field grid">
+				    <label htmlFor="accountOwner" class="col-12 mb-2 md:col-4 md:mb-0">Chủ tài khoản</label>
+				    <div class="col-12 md:col-8">
+                        <input formControlName="accountOwner" placeholder="Nhập chủ tài khoản" pInputText id="accountOwner" type="text" />
+                    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="bankAddress" class="col-12 mb-2 md:col-4 md:mb-0">Nhập chi nhánh</label>
+				    <div class="col-12 md:col-8">
+                        <input formControlName="bankAddress" placeholder="Nhập chi nhánh" pInputText id="bankAddress" type="text" />
+                    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="status" class="col-12 mb-2 md:col-4 md:mb-0">Trạng thái</label>
+				    <div class="col-12 md:col-8">
+                        <p-dropdown formControlName="status" placeholder="--Chọn trạng thái--" inputId="status" [autoDisplayFirst]="false" [options]="status" optionLabel="name" class="ng-invalid ng-dirty"></p-dropdown>
+                    </div>
+			    </div>
+			    <div class="flex field grid">
+                    <label htmlFor="contact" class="col-12 mb-2 md:col-4 md:mb-0">Đầu mối liên hệ</label>
+				    <div class="col-12 md:col-8">
+                        <input formControlName="contact" pInputText id="contact" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+                    <label htmlFor="emailContact" class="col-12 mb-2 md:col-4 md:mb-0">Email người liên hệ</label>
+				    <div class="col-12 md:col-8">
+                        <input formControlName="emailContact" placeholder="example123@gmail.com" pInputText id="emailContact" type="text" />
+				    </div>
+			    </div>
+                <div class="flex field grid">
+                    <label htmlFor="saleCharge" class="col-12 mb-2 md:col-4 md:mb-0">Nv Sale 24h phụ trách</label>
+				    <div class="col-12 md:col-8">
+                        <p-dropdown formControlName="saleCharge" placeholder="--Chọn nhân viên--" inputId="saleCharge" [autoDisplayFirst]="false" [options]="status" optionLabel="name" class="ng-invalid ng-dirty"></p-dropdown>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+                    <label htmlFor="coordinatorCharge" class="col-12 mb-2 md:col-4 md:mb-0">Điều phối 24h phụ trách</label>
+				    <div class="col-12 md:col-8">
+                        <p-dropdown formControlName="coordinatorCharge" placeholder="--Chọn nhân viên--" inputId="coordinatorCharge" [autoDisplayFirst]="false" [options]="status" optionLabel="name" class="ng-invalid ng-dirty"></p-dropdown>
+				    </div>
+			    </div>
+                <div class="flex field grid">
+				    <label htmlFor="note" class="col-12 mb-2 md:col-4 md:mb-0">Ghi chú</label>
+				    <div class="col-12 md:col-8 ">
+					    <textarea formControlName="note" inputId="note" rows="2" cols="30" pInputTextarea class="ng-invalid ng-dirty"></textarea>
+				    </div>
+			    </div>
+		    </div>
+        </div>
+    </form>
+</div>
+<div class="mt-[20px] mb-[20px] flex box-border justify-end">
+    <button pButton pRipple type="button" label="Huỷ" class="p-button-secondary mr-2"></button>
+	<button pButton pRipple label="Xác nhận" (click)="submit()" class="p-button-primary"></button>
+</div>
