@@ -7,149 +7,380 @@
             </p>
         </div>
     </div>
-    <div class="" [formGroup]="form">
-        <div class="flex card p-fluid">
-            <div class="col-6 pr-[100px]">
-			    <div class="flex field grid">
-				    <label htmlFor="licensPlate" class="col-12 mb-2 md:col-4 md:mb-0">Biển số xe</label>
-				    <div class="col-12 md:col-8">
-					    <input formControlName="licensPlate" pInputText id="licensPlate" type="text" />
-				    </div>
-			    </div>
-			    <div class="flex field grid">
-				    <label htmlFor="load" class="col-12 mb-2 md:col-4 md:mb-0">Trọng tải</label>
-				    <div class="flex items-center col-12 md:col-8">
-					    <input formControlName="load" pInputText id="load" type="text" />
-                        <span class="pl-2">Tấn</span>
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="brand" class="col-12 mb-2 md:col-4 md:mb-0">Hãng xe</label>
-				    <div class="flex col-12 md:col-8">
-					    <input formControlName="brand" pInputText id="brand" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="chassisNumber" class="col-12 mb-2 md:col-4 md:mb-0">Số khung</label>
-				    <div class="flex col-12 md:col-8">
-					    <input formControlName="chassisNumber" pInputText id="chassisNumber" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="machineNumber" class="col-12 mb-2 md:col-4 md:mb-0">Số máy</label>
-				    <div class="flex col-12 md:col-8">
-					    <input formControlName="machineNumber" pInputText id="machineNumber" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="length/weight/height" class="col-12 mb-2 md:col-4 md:mb-0">Dài/rộng/cao</label>
-				    <div class="flex items-center col-12 md:col-8">
-					    <input formControlName="length" pInputText id="length/weight/height" type="text" />
-                        <span class="pl-2 pr-2">m</span>
-                        <input formControlName="weight" pInputText id="length/weight/height" type="text" />
-                        <span class="pl-2 pr-2 ">m</span>
-                        <input formControlName="height" pInputText id="length/weight/height" type="text" />
-                        <span class="pl-2 pr-2 ">m</span>
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="volume" class="col-12 mb-2 md:col-4 md:mb-0">Thể tích</label>
-				    <div class="flex col-12 md:col-8">
-					    <input formControlName="volume" pInputText id="volume" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-                    <label htmlFor="badge" class="col-12 mb-2 md:col-4 md:mb-0">Phù hiệu</label>
-                    <div class="col-12 md:col-8 ">
-                        <p-calendar formControlName="badge" inputId="badge" placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
+    <div class="main-card-container">
+        <div [formGroup]="form">
+            <div class="flex card p-fluid">
+                <div class="col-6 pr-[100px]">
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="licensPlate"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Biển số xe</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="licensPlate"
+                                pInputText
+                                id="licensPlate"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="load"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Trọng tải</label
+                        >
+                        <div class="flex items-center col-12 md:col-8">
+                            <input
+                                formControlName="load"
+                                pInputText
+                                id="load"
+                                type="text"
+                            />
+                            <span class="pl-2">Tấn</span>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="brand"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Hãng xe</label
+                        >
+                        <div class="flex col-12 md:col-8">
+                            <input
+                                formControlName="brand"
+                                pInputText
+                                id="brand"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="chassisNumber"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Số khung</label
+                        >
+                        <div class="flex col-12 md:col-8">
+                            <input
+                                formControlName="chassisNumber"
+                                pInputText
+                                id="chassisNumber"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="machineNumber"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Số máy</label
+                        >
+                        <div class="flex col-12 md:col-8">
+                            <input
+                                formControlName="machineNumber"
+                                pInputText
+                                id="machineNumber"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="length/weight/height"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Dài/rộng/cao</label
+                        >
+                        <div class="flex items-center col-12 md:col-8">
+                            <input
+                                formControlName="length"
+                                pInputText
+                                id="length/weight/height"
+                                type="text"
+                            />
+                            <span class="pl-2 pr-2">m</span>
+                            <input
+                                formControlName="weight"
+                                pInputText
+                                id="length/weight/height"
+                                type="text"
+                            />
+                            <span class="pl-2 pr-2">m</span>
+                            <input
+                                formControlName="height"
+                                pInputText
+                                id="length/weight/height"
+                                type="text"
+                            />
+                            <span class="pl-2 pr-2">m</span>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="volume"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Thể tích</label
+                        >
+                        <div class="flex col-12 md:col-8">
+                            <input
+                                formControlName="volume"
+                                pInputText
+                                id="volume"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="badge"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Phù hiệu</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-calendar
+                                formControlName="badge"
+                                inputId="badge"
+                                placeholder="dd/MM/yyyy"
+                                class="ng-invalid ng-dirty"
+                                [showIcon]="true"
+                            ></p-calendar>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="registry"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Đăng kiểm</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-calendar
+                                formControlName="registry"
+                                inputId="registry"
+                                placeholder="dd/MM/yyyy"
+                                class="ng-invalid ng-dirty"
+                                [showIcon]="true"
+                            ></p-calendar>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="bhtnds"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >BH TNDS</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-calendar
+                                formControlName="bhtnds"
+                                inputId="bhtnds"
+                                placeholder="dd/MM/yyyy"
+                                class="ng-invalid ng-dirty"
+                                [showIcon]="true"
+                            ></p-calendar>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="bhvcx"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >BH VCX</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-calendar
+                                formControlName="bhvcx"
+                                inputId="bhvcx"
+                                placeholder="dd/MM/yyyy"
+                                class="ng-invalid ng-dirty"
+                                [showIcon]="true"
+                            ></p-calendar>
+                        </div>
                     </div>
                 </div>
-                <div class="flex field grid">
-                    <label htmlFor="registry" class="col-12 mb-2 md:col-4 md:mb-0">Đăng kiểm</label>
-                    <div class="col-12 md:col-8 ">
-                        <p-calendar formControlName="registry" inputId="registry"  placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
+                <div class="col-6 pl-[100px]">
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="cardVertDate"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Hạn cà vẹt</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-calendar
+                                formControlName="cardVertDate"
+                                inputId="cardVertDate"
+                                placeholder="dd/MM/yyyy"
+                                class="ng-invalid ng-dirty"
+                                [showIcon]="true"
+                            ></p-calendar>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="documentStatus"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Trạng thái giấy tờ</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-dropdown
+                                formControlName="documentStatus"
+                                inputId="documentStatus"
+                                [autoDisplayFirst]="false"
+                                placeholder="--Chọn trạng thái giấy tờ--"
+                                [options]="status"
+                                class="ng-invalid ng-dirty"
+                            ></p-dropdown>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="maintenanceStatus"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Trạng thái bảo dưỡng</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-dropdown
+                                formControlName="maintenanceStatus"
+                                inputId="maintenanceStatus"
+                                [autoDisplayFirst]="false"
+                                placeholder="--Chọn trạng thái--"
+                                [options]="status"
+                                class="ng-invalid ng-dirty"
+                            ></p-dropdown>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="managementUnitName"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Tên đv quản lý</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-dropdown
+                                formControlName="managementUnitName"
+                                inputId="managementUnitName"
+                                [autoDisplayFirst]="false"
+                                placeholder="--Chọn đơn vị quản lý--"
+                                [options]="status"
+                                class="ng-invalid ng-dirty"
+                            ></p-dropdown>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="typeActive"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Hình thức hoạt động</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-dropdown
+                                formControlName="typeActive"
+                                inputId="typeActive"
+                                [autoDisplayFirst]="false"
+                                placeholder="--Chọn loại xe--"
+                                [options]="status"
+                                class="ng-invalid ng-dirty"
+                            ></p-dropdown>
+                        </div>
+                    </div>
+                    <div class="flex justify-between field grid">
+                        <label
+                            htmlFor="purchaseDate"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Ngày mua/thuê xe</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-calendar
+                                formControlName="purchaseDate"
+                                inputId="purchaseDate"
+                                placeholder="dd/MM/yyyy"
+                                class="ng-invalid ng-dirty"
+                                [showIcon]="true"
+                            ></p-calendar>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="carDealerships"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Đại lí cho thuê xe</label
+                        >
+                        <div class="flex items-center col-12 md:col-8">
+                            <input
+                                formControlName="carDealerships"
+                                pInputText
+                                id="carDealerships"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="costBuyCar"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Chi phí mua xe</label
+                        >
+                        <div class="flex items-center col-12 md:col-8">
+                            <input
+                                formControlName="costBuyCar"
+                                pInputText
+                                id="costBuyCar"
+                                type="text"
+                            />
+                            <span class="pl-2">VND</span>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="note"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Ghi chú</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <textarea
+                                formControlName="note"
+                                inputId="note"
+                                rows="4"
+                                cols="30"
+                                pInputTextarea
+                                class="ng-invalid ng-dirty"
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="yearOfManufacture"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Năm sản xuất</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="yearOfManufacture"
+                                pInputText
+                                id="yearOfManufacture"
+                                type="text"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div class="flex field grid">
-                    <label htmlFor="bhtnds" class="col-12 mb-2 md:col-4 md:mb-0">BH TNDS</label>
-                    <div class="col-12 md:col-8 ">
-                        <p-calendar formControlName="bhtnds" inputId="bhtnds"  placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
-                    </div>
-                </div>
-                <div class="flex field grid">
-                    <label htmlFor="bhvcx" class="col-12 mb-2 md:col-4 md:mb-0">BH VCX</label>
-                    <div class="col-12 md:col-8 ">
-                        <p-calendar formControlName="bhvcx" inputId="bhvcx"  placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
-                    </div>
-                </div>
-		    </div>
-            <div class="col-6 pl-[100px]">
-                <div class="flex field grid">
-                    <label htmlFor="cardVertDate" class="col-12 mb-2 md:col-4 md:mb-0">Hạn cà vẹt</label>
-                    <div class="col-12 md:col-8 ">
-                        <p-calendar formControlName="cardVertDate" inputId="cardVertDate"  placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
-                    </div>
-                </div>
-			    <div class="flex field grid">
-                    <label htmlFor="documentStatus" class="col-12 mb-2 md:col-4 md:mb-0">Trạng thái giấy tờ</label>
-				    <div class="col-12 md:col-8">
-                        <p-dropdown formControlName="documentStatus" inputId="documentStatus" [autoDisplayFirst]="false" placeholder="--Chọn trạng thái giấy tờ--" [options]="status" class="ng-invalid ng-dirty"></p-dropdown>
-				    </div>
-			    </div>
-                <div class="flex field grid">
-                    <label htmlFor="maintenanceStatus" class="col-12 mb-2 md:col-4 md:mb-0">Trạng thái bảo dưỡng</label>
-				    <div class="col-12 md:col-8">
-                        <p-dropdown formControlName="maintenanceStatus" inputId="maintenanceStatus" [autoDisplayFirst]="false" placeholder="--Chọn trạng thái--" [options]="status" class="ng-invalid ng-dirty"></p-dropdown>
-				    </div>
-			    </div>
-                <div class="flex field grid">
-                    <label htmlFor="managementUnitName" class="col-12 mb-2 md:col-4 md:mb-0">Tên đv quản lý</label>
-				    <div class="col-12 md:col-8">
-                        <p-dropdown formControlName="managementUnitName" inputId="managementUnitName" [autoDisplayFirst]="false" placeholder="--Chọn đơn vị quản lý--" [options]="status" class="ng-invalid ng-dirty"></p-dropdown>
-				    </div>
-			    </div>
-                <div class="flex field grid">
-                    <label htmlFor="typeActive" class="col-12 mb-2 md:col-4 md:mb-0">Hình thức hoạt động</label>
-				    <div class="col-12 md:col-8">
-                        <p-dropdown formControlName="typeActive" inputId="typeActive" [autoDisplayFirst]="false" placeholder="--Chọn loại xe--" [options]="status" class="ng-invalid ng-dirty"></p-dropdown>
-				    </div>
-			    </div>
-                <div class="flex justify-between field grid">
-				    <label htmlFor="purchaseDate" class="col-12 mb-2 md:col-4 md:mb-0">Ngày mua/thuê xe</label>
-				    <div class="col-12 md:col-8">
-                        <p-calendar formControlName="purchaseDate" inputId="purchaseDate" placeholder="dd/MM/yyyy" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
-                    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="carDealerships" class="col-12 mb-2 md:col-4 md:mb-0">Đại lí cho thuê xe</label>
-				    <div class="flex items-center col-12 md:col-8">
-					    <input formControlName="carDealerships" pInputText id="carDealerships" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="costBuyCar" class="col-12 mb-2 md:col-4 md:mb-0">Chi phí mua xe</label>
-				    <div class="flex items-center col-12 md:col-8">
-					    <input formControlName="costBuyCar" pInputText id="costBuyCar" type="text" />
-                        <span class="pl-2">VND</span>
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="note" class="col-12 mb-2 md:col-4 md:mb-0">Ghi chú</label>
-				    <div class="col-12 md:col-8 ">
-					    <textarea formControlName="note" inputId="note" rows="2" cols="30" pInputTextarea class="ng-invalid ng-dirty"></textarea>
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="yearOfManufacture" class="col-12 mb-2 md:col-4 md:mb-0">Năm sản xuất</label>
-				    <div class="col-12 md:col-8 ">
-					    <input formControlName="yearOfManufacture" pInputText id="yearOfManufacture" type="text" />
-				    </div>
-			    </div>
-		    </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="mt-[20px] mb-[20px] flex box-border justify-end">
-    <button pButton pRipple type="button" label="Huỷ" class="p-button-secondary mr-2"></button>
-	<button pButton pRipple label="Xác nhận" (click)="submit()" class="p-button-primary"></button>
+    <div class="flex box-border py-[15px] pr-[50px]">
+        <div class="footer-card-container">
+            <button
+                pButton
+                pRipple
+                type="button"
+                label="Huỷ"
+                class="p-button-secondary mr-2"
+            ></button>
+            <button
+                pButton
+                pRipple
+                label="Xác nhận"
+                (click)="submit()"
+                class="p-button-primary"
+            ></button>
+        </div>
+    </div>
 </div>

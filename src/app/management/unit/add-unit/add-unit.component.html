@@ -7,124 +7,310 @@
             </p>
         </div>
     </div>
-    <div class="" [formGroup]="form">
-        <div class="flex card p-fluid">
-            <div class="col-6 pr-[100px]">
-			    <div class="flex field grid">
-				    <label htmlFor="name" class="col-12 mb-2 md:col-4 md:mb-0">Tên ĐVCƯ xe </label>
-				    <div class="col-12 md:col-8">
-					    <input formControlName="name" pInputText id="name" type="text" />
-				    </div>
-			    </div>
-			    <div class="flex field grid">
-				    <label htmlFor="group" class="col-12 mb-2 md:col-4 md:mb-0">Nhóm ĐVCƯ xe</label>
-				    <div class="col-12 md:col-8 ">
-					    <p-dropdown formControlName="group" inputId="group" [autoDisplayFirst]="false" [options]="status" optionLabel="name" class="ng-invalid ng-dirty"></p-dropdown>
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="emailCompany" class="col-12 mb-2 md:col-4 md:mb-0">Email công ty</label>
-				    <div class="col-12 md:col-8 ">
-					    <input formControlName="emailCompany" pInputText id="emailCompany" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="createdDate" class="col-12 mb-2 md:col-4 md:mb-0">Ngày tạo thông tin</label>
-				    <div class="col-12 md:col-8 ">
-					    <p-calendar formControlName="createdDate" inputId="createdDate" class="ng-invalid ng-dirty" [showIcon]="true"></p-calendar>
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="taxName" class="col-12 mb-2 md:col-4 md:mb-0">Tên khai thuế</label>
-				    <div class="col-12 md:col-8 ">
-					    <input formControlName="taxName" pInputText id="taxName" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="taxCode" class="col-12 mb-2 md:col-4 md:mb-0">Mã số thuế</label>
-				    <div class="col-12 md:col-8 ">
-					    <input formControlName="taxCode" pInputText id="taxCode" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="invoicingAddress" class="col-12 mb-2 md:col-4 md:mb-0">Địa chỉ xuất hoá đơn</label>
-				    <div class="col-12 md:col-8 ">
-					    <input formControlName="invoicingAddress" pInputText id="invoicingAddress" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="accountNumber" class="col-12 mb-2 md:col-4 md:mb-0">Số tài khoản</label>
-				    <div class="col-12 md:col-8">
-                        <input formControlName="accountNumber" pInputText id="accountNumber" type="text" />
+    <div class="main-card-container">
+        <div [formGroup]="form">
+            <div class="flex card p-fluid">
+                <div class="col-6 pr-[100px]">
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="name"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Tên ĐVCƯ xe
+                        </label>
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="name"
+                                pInputText
+                                id="name"
+                                type="text"
+                            />
+                        </div>
                     </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="bankName" class="col-12 mb-2 md:col-4 md:mb-0">Ngân hàng</label>
-				    <div class="col-12 md:col-8">
-                        <p-dropdown formControlName="bankName" inputId="bankName" [autoDisplayFirst]="false" [options]="status" optionLabel="name" class="ng-invalid ng-dirty"></p-dropdown>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="group"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Nhóm ĐVCƯ xe</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-dropdown
+                                formControlName="group"
+                                inputId="group"
+                                [autoDisplayFirst]="false"
+                                [options]="status"
+                                optionLabel="name"
+                                class="ng-invalid ng-dirty"
+                            ></p-dropdown>
+                        </div>
                     </div>
-			    </div>
-		    </div>
-            <div class="col-6 pl-[100px]">
-                <div class="flex field grid">
-				    <label htmlFor="accountOwner" class="col-12 mb-2 md:col-4 md:mb-0">Chủ tài khoản</label>
-				    <div class="col-12 md:col-8">
-                        <input formControlName="accountOwner" pInputText id="accountOwner" type="text" />
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="emailCompany"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Email công ty</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="emailCompany"
+                                pInputText
+                                id="emailCompany"
+                                type="text"
+                            />
+                        </div>
                     </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="bankAddress" class="col-12 mb-2 md:col-4 md:mb-0">Nhập chi nhánh</label>
-				    <div class="col-12 md:col-8">
-                        <input formControlName="bankAddress" pInputText id="bankAddress" type="text" />
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="createdDate"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Ngày tạo thông tin</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-calendar
+                                formControlName="createdDate"
+                                inputId="createdDate"
+                                class="ng-invalid ng-dirty"
+                                [showIcon]="true"
+                            ></p-calendar>
+                        </div>
                     </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="status" class="col-12 mb-2 md:col-4 md:mb-0">Trạng thái</label>
-				    <div class="col-12 md:col-8">
-                        <p-dropdown formControlName="status" inputId="status" [autoDisplayFirst]="false" [options]="status" optionLabel="name" class="ng-invalid ng-dirty"></p-dropdown>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="taxName"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Tên khai thuế</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="taxName"
+                                pInputText
+                                id="taxName"
+                                type="text"
+                            />
+                        </div>
                     </div>
-			    </div>
-			    <div class="flex field grid">
-                    <label htmlFor="businessLicense" class="col-12 mb-2 md:col-4 md:mb-0">Giấy phép kinh doanh</label>
-				    <div class="col-12 md:col-8">
-                        <input formControlName="businessLicense" pInputText id="businessLicense" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-                    <label htmlFor="transportBusinessLicense" class="col-12 mb-2 md:col-4 md:mb-0">Giấy phép kinh doanh vận tải</label>
-				    <div class="col-12 md:col-8">
-                        <input formControlName="transportBusinessLicense" pInputText id="transportBusinessLicense" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-                    <label htmlFor="contact" class="col-12 mb-2 md:col-4 md:mb-0">Đầu mối liên hệ</label>
-				    <div class="col-12 md:col-8">
-                        <input formControlName="contact" pInputText id="contact" type="text" />
-				    </div>
-			    </div>
-                <div class="flex field grid">
-                    <label htmlFor="phoneContact" class="col-12 mb-2 md:col-4 md:mb-0">Số điện thoại đầu mối</label>
-				    <div class="col-12 md:col-8">
-                        <input formControlName="phoneContact" pInputText id="phoneContact" type="text" />
-				    </div>
-			    </div>
-                <div class="flex justify-between field grid">
-				    <label htmlFor="emailContact" class="col-12 mb-2 md:col-4 md:mb-0">Email người liên hệ</label>
-				    <div class="col-12 md:col-8">
-                        <input formControlName="emailContact" pInputText id="emailContact" type="text" />
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="taxCode"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Mã số thuế</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="taxCode"
+                                pInputText
+                                id="taxCode"
+                                type="text"
+                            />
+                        </div>
                     </div>
-			    </div>
-                <div class="flex field grid">
-				    <label htmlFor="note" class="col-12 mb-2 md:col-4 md:mb-0">Ghi chú</label>
-				    <div class="col-12 md:col-8 ">
-					    <textarea formControlName="note" inputId="note" rows="2" cols="30" pInputTextarea class="ng-invalid ng-dirty"></textarea>
-				    </div>
-			    </div>
-		    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="invoicingAddress"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Địa chỉ xuất hoá đơn</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="invoicingAddress"
+                                pInputText
+                                id="invoicingAddress"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="accountNumber"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Số tài khoản</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="accountNumber"
+                                pInputText
+                                id="accountNumber"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="bankName"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Ngân hàng</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-dropdown
+                                formControlName="bankName"
+                                inputId="bankName"
+                                [autoDisplayFirst]="false"
+                                [options]="status"
+                                optionLabel="name"
+                                class="ng-invalid ng-dirty"
+                            ></p-dropdown>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 pl-[100px]">
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="accountOwner"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Chủ tài khoản</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="accountOwner"
+                                pInputText
+                                id="accountOwner"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="bankAddress"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Nhập chi nhánh</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="bankAddress"
+                                pInputText
+                                id="bankAddress"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="status"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Trạng thái</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <p-dropdown
+                                formControlName="status"
+                                inputId="status"
+                                [autoDisplayFirst]="false"
+                                [options]="status"
+                                optionLabel="name"
+                                class="ng-invalid ng-dirty"
+                            ></p-dropdown>
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="businessLicense"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Giấy phép kinh doanh</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="businessLicense"
+                                pInputText
+                                id="businessLicense"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="transportBusinessLicense"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Giấy phép kinh doanh vận tải</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="transportBusinessLicense"
+                                pInputText
+                                id="transportBusinessLicense"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="contact"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Đầu mối liên hệ</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="contact"
+                                pInputText
+                                id="contact"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="phoneContact"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Số điện thoại đầu mối</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="phoneContact"
+                                pInputText
+                                id="phoneContact"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex justify-between field grid">
+                        <label
+                            htmlFor="emailContact"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Email người liên hệ</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <input
+                                formControlName="emailContact"
+                                pInputText
+                                id="emailContact"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex field grid">
+                        <label
+                            htmlFor="note"
+                            class="col-12 mb-2 md:col-4 md:mb-0"
+                            >Ghi chú</label
+                        >
+                        <div class="col-12 md:col-8">
+                            <textarea
+                                formControlName="note"
+                                inputId="note"
+                                rows="2"
+                                cols="30"
+                                pInputTextarea
+                                class="ng-invalid ng-dirty"
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="mt-[20px] mb-[20px] flex box-border justify-end">
-    <button pButton pRipple type="button" label="Huỷ" class="p-button-secondary mr-2"></button>
-	<button pButton pRipple label="Xác nhận" (click)="submit()" class="p-button-primary"></button>
+    <div class="flex box-border py-[15px] pr-[50px]">
+        <div class="footer-card-container">
+            <button
+                pButton
+                pRipple
+                type="button"
+                label="Huỷ"
+                class="p-button-secondary mr-2"
+            ></button>
+            <button
+                pButton
+                pRipple
+                label="Xác nhận"
+                (click)="submit()"
+                class="p-button-primary"
+            ></button>
+        </div>
+    </div>
 </div>

@@ -1,12 +1,12 @@
-<div >
-    <div class="card card-w-title flex flex-wrap">
-        <div class="col-12 h-full">
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
             <p-tabMenu styleClass="mb-5" [model]="routeItems"></p-tabMenu>
             <p-table
                 #dt1
                 [value]="billingOperate"
                 dataKey="id"
-                [rows]="5"
+                [rows]="6"
                 [rowHover]="true"
                 styleClass="p-datatable-gridlines"
                 [paginator]="true"
@@ -20,12 +20,12 @@
             >
                 <ng-template pTemplate="caption">
                     <div class="flex items-center gap-5">
-                        <div class="flex rounded justify-content-center text-center items-center bg-gray-400 w-[200px] h-[42px]">
-                            <span
-                                >Bộ lọc thông tin</span
-                            >
-                        </div>
-                        <span class="p-input-icon-left w-[400px] h-[42px]">
+                        <button
+                            class="flex rounded justify-content-center text-center items-center bg-gray-400 w-[250px] h-[36px]"
+                        >
+                            <span>Bộ lọc thông tin</span>
+                        </button>
+                        <span class="p-input-icon-left w-[400px] h-[36px]">
                             <i class="pi pi-search"></i>
                             <input
                                 pInputText
@@ -40,22 +40,23 @@
                             [(ngModel)]="selectedDrop"
                             placeholder="Trạng Thái"
                             [showClear]="true"
-                            class="h-[42px]"
+                            class="h-[36px]"
                         ></p-dropdown>
                         <button
                             pButton
                             pRipple
                             type="button"
                             label="Tìm kiếm"
-                            class="p-button-outlined h-[42px]"
+                            class="p-button-outlined h-[36px] w-[125px]"
                         ></button>
-                        <button pButton
-                            pRipple label="Tạo mới"
+                        <button
+                            pButton
+                            pRipple
+                            label="Tạo mới"
                             icon="pi pi-plus"
-                            class="p-button-primary mr-2 h-[42px]"
+                            class="p-button-primary mr-2 h-[36px] w-[125px]"
                             routerLink="/management/add-billingOperate"
                         ></button>
-
                     </div>
                 </ng-template>
                 <ng-template pTemplate="header">
@@ -71,7 +72,7 @@
                             <div
                                 class="flex justify-content-center text-center items-center"
                             >
-                               <span>HÀNH ĐỘNG</span>
+                                <span>HÀNH ĐỘNG</span>
                             </div>
                         </th>
                         <th style="min-width: 8rem">
@@ -126,37 +127,77 @@
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-billingOperate>
-					<tr>
-                        <td class="justify-content-center text-center items-center">
+                    <tr>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
                             <span>1</span>
                         </td>
-                        <td class="justify-content-center text-center items-center">
-                            <button pButton pRipple icon="pi pi-eye" class="p-button-rounded p-button-help mr-2"></button>
-                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger" ></button>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <button
+                                pButton
+                                pRipple
+                                icon="pi pi-eye"
+                                class="p-button-rounded p-button-help mr-2"
+                            ></button>
+                            <button
+                                pButton
+                                pRipple
+                                icon="pi pi-trash"
+                                class="p-button-rounded p-button-danger"
+                            ></button>
                         </td>
-						<td class="justify-content-center text-center items-center">
-							<span>{{billingOperate.id}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{billingOperate.type}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{billingOperate.name}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{billingOperate.status}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-                            <span class="image-text ml-2">{{billingOperate.category}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{billingOperate.costName}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{billingOperate.costGroup}}</span>
-						</td>
-					</tr>
-				</ng-template>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span>{{ billingOperate.id }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                billingOperate.type
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                billingOperate.name
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                billingOperate.status
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                billingOperate.category
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                billingOperate.costName
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                billingOperate.costGroup
+                            }}</span>
+                        </td>
+                    </tr>
+                </ng-template>
             </p-table>
         </div>
     </div>

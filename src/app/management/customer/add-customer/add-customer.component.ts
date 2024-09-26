@@ -24,7 +24,7 @@ export class AddCustomerComponent implements OnInit {
             name: new FormControl('',Validators.compose([Validators.required])),
             emailCompany: new FormControl('',Validators.compose([Validators.required])),
             createdDate: new FormControl('',Validators.compose([Validators.required])),
-            adress: new FormControl('',Validators.compose([Validators.required])),
+            invoicingAddress: new FormControl('',Validators.compose([Validators.required])),
             customerType: new FormControl('',Validators.compose([Validators.required])),
             bankName: new FormControl('',Validators.compose([Validators.required])),
             accountOwner: new FormControl('',Validators.compose([Validators.required])),

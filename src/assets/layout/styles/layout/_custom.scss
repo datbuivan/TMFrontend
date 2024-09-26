@@ -1,0 +1,25 @@
+.p-datatable {
+    position: unset !important;
+}
+
+.card-container {
+    background-color: #ffffff;
+    border: 1px solid #dfe7ef;
+    height: calc(100vh - 9rem);
+    width: auto;
+
+    .main-card-container {
+        max-height: calc(100vh - 18rem);
+        overflow: auto;
+
+
+    }
+
+    .footer-card-container {
+        margin-left: auto
+    }
+}
+
+.card {
+    border: 1px;
+}

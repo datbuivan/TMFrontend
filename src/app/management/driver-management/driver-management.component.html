@@ -1,12 +1,12 @@
-<div >
-    <div class="card card-w-title flex flex-wrap">
-        <div class="col-12 h-full">
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
             <p-tabMenu styleClass="mb-5" [model]="routeItems"></p-tabMenu>
             <p-table
                 #dt1
                 [value]="driver"
                 dataKey="id"
-                [rows]="5"
+                [rows]="6"
                 [rowHover]="true"
                 styleClass="p-datatable-gridlines"
                 [paginator]="true"
@@ -19,43 +19,54 @@
                 responsiveLayout="scroll"
             >
                 <ng-template pTemplate="caption">
-                    <div class="flex items-center gap-5">
-                        <div class="flex rounded justify-content-center text-center items-center bg-gray-400 w-[200px] h-[42px]">
-                            <span
-                                >Bộ lọc thông tin</span
+                    <div class="flex items-center p-fluid">
+                        <div class="w-56 h-12 mr-2">
+                            <button
+                                class="flex rounded justify-content-center text-center items-center bg-gray-400 w-full h-full"
                             >
+                                <span>Bộ lọc thông tin</span>
+                            </button>
                         </div>
-                        <span class="p-input-icon-left w-[400px] h-[42px]">
-                            <i class="pi pi-search"></i>
-                            <input
-                                pInputText
-                                type="text"
-                                #filter
-                                placeholder="Nhập thông tin tìm kiếm tài xế"
-                                class="w-full"
-                            />
-                        </span>
-                        <p-dropdown
-                            [options]="status"
-                            [(ngModel)]="selectedDrop"
-                            placeholder="Trạng Thái"
-                            [showClear]="true"
-                            class="h-[42px]"
-                        ></p-dropdown>
-                        <button
-                            pButton
-                            pRipple
-                            type="button"
-                            label="Tìm kiếm"
-                            class="p-button-outlined h-[42px]"
-                        ></button>
-                        <button pButton
-                            pRipple label="Tạo mới"
-                            icon="pi pi-plus"
-                            class="p-button-primary mr-2 h-[42px]"
-                            routerLink="/management/add-driver"
-                        ></button>
-
+                        <div class="w-1/2 h-12 mx-3">
+                            <span class="p-input-icon-left w-full h-full">
+                                <i class="pi pi-search"></i>
+                                <input
+                                    pInputText
+                                    type="text"
+                                    #filter
+                                    placeholder="Nhập thông tin tìm kiếm tài xế"
+                                    class="w-full h-full"
+                                />
+                            </span>
+                        </div>
+                        <div class="w-48 h-12 mx-3">
+                            <p-dropdown
+                                [options]="status"
+                                [(ngModel)]="selectedDrop"
+                                placeholder="Trạng Thái"
+                                [showClear]="true"
+                                class="w-full h-11"
+                            ></p-dropdown>
+                        </div>
+                        <div class="w-40 h-12 mx-3">
+                            <button
+                                pButton
+                                pRipple
+                                type="button"
+                                label="Tìm kiếm"
+                                class="p-button-outlined w-full h-full"
+                            ></button>
+                        </div>
+                        <div class="w-40 h-13 mx-3">
+                            <button
+                                pButton
+                                pRipple
+                                label="Tạo mới"
+                                icon="pi pi-plus"
+                                class="p-button-primary mr-2 w-full h-full"
+                                routerLink="/management/add-driver"
+                            ></button>
+                        </div>
                     </div>
                 </ng-template>
                 <ng-template pTemplate="header">
@@ -71,7 +82,9 @@
                             <div
                                 class="flex justify-content-center text-center items-center"
                             >
-                                <span>Mã NHÂN VIÊN</span>
+                                <span routerLinkActive="router-link-active"
+                                    >MÃ NHÂN VIÊN</span
+                                >
                             </div>
                         </th>
                         <th style="min-width: 8rem">
@@ -119,33 +132,66 @@
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-driver>
-					<tr>
-                        <td class="justify-content-center text-center items-center">
+                    <tr>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
                             <span>1</span>
                         </td>
-						<td class="justify-content-center text-center items-center">
-							<span>{{driver.id}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{driver.name}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{driver.phoneNumber}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{driver.status}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-                            <span class="image-text ml-2">{{driver.driverType}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{driver.rank}}</span>
-						</td>
-						<td class="justify-content-center text-center items-center">
-							<span class="image-text ml-2">{{driver.coordinatorInCharge}}</span>
-						</td>
-					</tr>
-				</ng-template>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <button
+                                routerLink="/management/driver-details"
+                                routerLinkActive="router-link-active"
+                            >
+                                {{ driver.id }}
+                            </button>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                driver.name
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                driver.phoneNumber
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                driver.status
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                driver.driverType
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                driver.rank
+                            }}</span>
+                        </td>
+                        <td
+                            class="justify-content-center text-center items-center"
+                        >
+                            <span class="image-text ml-2">{{
+                                driver.coordinatorInCharge
+                            }}</span>
+                        </td>
+                    </tr>
+                </ng-template>
             </p-table>
         </div>
     </div>

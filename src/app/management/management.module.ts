@@ -36,6 +36,7 @@ import { AddRouteComponent } from './Route/add-route/add-route.component';
 import { AddTripComponent } from './Trip/add-trip/add-trip.component';
 import { AddTruckComponent } from './truck/add-truck/add-truck.component';
 import { AddUnitComponent } from './unit/add-unit/add-unit.component';
+import { DriverDetailsComponent } from './driver-management/driver-details/driver-details.component';
 
 const importModules = [
     RouterModule.forChild(ManagementRoutes),
@@ -79,7 +80,8 @@ const importModules = [
         AddRouteComponent,
         AddTripComponent,
         AddTruckComponent,
-        AddUnitComponent
+        AddUnitComponent,
+        DriverDetailsComponent,
     ],
 })
 export class ManagementModule {}

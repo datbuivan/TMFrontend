@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import {
+    HashLocationStrategy,
+    LocationStrategy,
+    PathLocationStrategy,
+} from '@angular/common';
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { ProductService } from './demo/service/product.service';
@@ -17,27 +21,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { appRoutes } from './app.routing';
 
 const routerConfig: ExtraOptions = {
-	preloadingStrategy: PreloadAllModules,
-	scrollPositionRestoration: 'enabled',
-    anchorScrolling: 'enabled',
-    onSameUrlNavigation: 'reload'
-}
+    preloadingStrategy: PreloadAllModules,
+    scrollPositionRestoration: 'enabled',
+    // anchorScrolling: 'enabled',
+    // onSameUrlNavigation: 'reload',
+};
 @NgModule({
-    declarations: [
-        AppComponent,
-   ],
+    declarations: [AppComponent],
     imports: [
         BrowserModule,
-		BrowserAnimationsModule,
+        BrowserAnimationsModule,
         RouterModule.forRoot(appRoutes, routerConfig),
         LayoutModule,
-        ManagementModule
+        ManagementModule,
     ],
     providers: [
-        { provide: LocationStrategy, useClass: HashLocationStrategy },
-        CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService
+        CountryService,
+        CustomerService,
+        EventService,
+        IconService,
+        NodeService,
+        PhotoService,
+        ProductService,
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
